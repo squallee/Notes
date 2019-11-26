@@ -1,6 +1,6 @@
 # tuple
 1. 不可变, iterable
-```
+```python
 name_tuple = ('bob', 'sam')
 for name in name_list:
 	print(name)
@@ -48,21 +48,21 @@ user = User(name="bobby", age=29, height=175)
 print(user.age, user.name, user.height)
 
 class User:
-	def __init__(self, name, age, height):
-		pass
+    def __init__(self, name, age, height):
+        pass
 # why not define a class
 # namedtuple是tuple的一个子类，使用起来比较简单
 # 省空间, 不必创建不需要的类属性
-···
+```
 2. 可由tuple初始化namedtuple
-···
+```
 from collections import namedtuple
 User = namedtuple("User", ["name", "age", "height"])
 user_tuple = ("bobby", 29, 175)
 user = User(*user_tuple)
 User2 = namedtuple("User", ["name", "age", "height", "edu"])
 user2 = User2(*user_tuple, "master")
-···
+```
 3. _make()的用法
 ```
 # def _make(cls, iterable, ...)
@@ -81,7 +81,7 @@ User = namedtuple("User", ["name", "age", "height"])
 user_tuple = ("bobby", 29, 175)
 user = User(*user_tuple)
 user_info_dict = user._asdict()
-
+```
 # defaultdict
 1. dict usage: setup a dict
 ```
