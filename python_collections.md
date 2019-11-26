@@ -123,7 +123,7 @@ def gen_default():
 
 default_dict = defaultdict(gen_default)
 default_dict['group1']
-
+```
 # deque
 1. usage
 ```
